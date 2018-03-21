@@ -32,3 +32,29 @@ perfectly, however, but that is what merge conflicts are for :)
         - Deliver your code to the BathroomMenu branch on the repository
   7)  Go to Github and make a pull request to the master branch
         - Code review will be done and once confirmed it works will be accepted to be master
+
+# Basic App Flow
+  - User logs into their account
+  - User creates a shopping list or opens an existing one
+  - Usr adds items via app or alexa
+  - User prints wirelessly or saves/shares shopping list
+  - User deletes list w/option to automatically delete after sharing
+  
+# Alexa Integration
+  - Create a custom skill
+  - Lambda function that executes a Python script to add user/list info to a sqlite database
+      - This info is to be accessed through the app to display the data in it live
+  - Alexa responds if the item was added/removed successfully or not
+  
+# Communication
+  - Ionic Application and Alexa Device connects to the Sqlite database in order to store/receive data.
+  - Ionic Application and Alexa Device needs to be able to connect to a WiFi printer or share the list
+  
+# Releases
+  - Version 1.0.0 Goals
+      - Account creation/login
+      - Landing page shows lists of shopping lists created by the user (which are stored on database)
+          - Allows user to add/remove lists
+      - Create List page to get name and other basic info, not items
+      - Add Items pages
+          - Categorize item pages to keep adding/removing simple and quick
